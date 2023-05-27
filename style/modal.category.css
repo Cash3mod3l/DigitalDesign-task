@@ -1,0 +1,39 @@
+#modal-category {
+    display: none;
+    justify-content: center;
+    align-content: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0000003b;
+    top: 0;
+    left: 0;
+}
+
+.categoryContainer {
+    overflow: auto;
+    background-color: white;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+.categoryItem {
+    border: 1px solid #c3c3c3;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    transition: 0.2s all;
+    color: black;
+    text-align: center;
+    margin: 7px;
+}
+
+.categoryItem:hover {
+    background-color: green;
+    color: white;
+}
+
+.categoryItem:active {
+    filter: brightness(90%);
+    transform: scale(0.97);
+}

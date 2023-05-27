@@ -1,0 +1,84 @@
+#modal-buy {
+    display: none;
+    justify-content: center;
+    align-content: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0000003b;
+    top: 0;
+    left: 0;
+}
+
+.form-block {
+    overflow: auto;
+    background-color: white;
+    padding: 10px;
+    border-radius: 7px;
+    color: black;
+}
+
+.form-block form {
+    width: 240px;
+    padding: 20px;
+}
+
+.radio-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+.num {
+    padding: 3px;
+    border-radius: 3px;
+    outline: none;
+    text-decoration: none;
+    border: none;
+    transition: 0.2s all;
+    margin-bottom: 12px;
+    box-shadow: 0 0 6px 0 grey;;
+}
+
+.comment-text {
+    padding: 5px;
+    max-width: 250px;
+    max-height: 150px;
+}
+
+#btn-block-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-buy-form,
+.btn-close {
+    flex: 1;
+    margin: 15px;
+    box-shadow: 0 2px 5px 0 #cfcfcf;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    visibility: visible;
+    transition: 0.2s all;
+}
+
+.btn-buy-form:hover {
+    background-color: green;
+    color: white;
+}
+
+.btn-close:hover {
+    background-color: red;
+    color: white;
+}
+
+.btn-buy-form:active,
+.btn-close:active {
+    filter: brightness(90%);
+}

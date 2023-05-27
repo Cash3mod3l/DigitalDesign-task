@@ -1,0 +1,105 @@
+body {
+    transition: 0.2s;
+}
+
+.products-block {
+    min-height: 90vh;
+    max-width: 1600px;
+    width: 1600px;
+    margin: 10px auto;
+    border: 1px solid #adabab;
+    box-shadow: 0 0 6px 0 gray;
+    border-radius: 10px;
+}
+
+.products-block-bg-gray {
+    background-color: #cbcbcb;
+    transition: 0.2s all;
+}
+
+.go-top {
+    position: fixed;
+    right: 25px;
+    bottom: 2%;
+    cursor: pointer;
+    font-size: 20px;
+    color: gray;
+    padding: 15px 10px;
+    visibility: hidden;
+}
+
+.go-top:hover {
+    filter: brightness(120%);
+}
+
+.container {
+    display: block;
+}
+
+
+.product-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    word-wrap: break-word;
+}
+
+.bottom-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.text-link {
+    color: black;
+    border-bottom: 1px dashed;
+    cursor: pointer;
+    padding: 2px;
+    margin: 5px;
+    text-decoration: none;
+    transition: 0.2s all;
+}
+
+.text-link:visited {
+    color: gray;
+    border-bottom: 1px solid gray;
+}
+
+.text-link:hover {
+    color: #154088;
+    border-bottom: .07em solid;
+}
+
+.theme-block {
+    display: flex;
+    justify-content: flex-end;
+    margin: 5px;
+}
+
+.btn-switch-theme {
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+    box-shadow: 0 0 6px 0 gray;
+    cursor: pointer;
+    transition: 0.2s all;
+}
+
+.btn-switch-theme:hover {
+    background-color: green;
+    filter: brightness(110%);
+    color: white;
+}
+
+.btn-switch-theme:active {
+    filter: brightness(90%);
+    transform: scale(0.97);
+}
+
+.dark-theme {
+    background-color: #383838;
+    color: #ffffff;
+    transition: 0.2s all;
+}

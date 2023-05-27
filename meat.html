@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style/index.style.css">
+    <link rel="stylesheet" href="/style/header.css">
+    <link rel="stylesheet" href="/style/cardProduct.css">
+    <link rel="stylesheet" href="/style/form.modal.css">
+    <link rel="stylesheet" href="/style/modal.category.css">
+    <title>Title</title>
+</head>
+<body>
+<div class="theme-block">
+    <button class="btn-switch-theme">Смена темы</button>
+</div>
+<header>
+    <div id="head">
+        <div>
+            <div id="block-nav">
+                <button class="btn" id="btn-category">Категория</button>
+                <a href="index.html">
+                    <button class="btn">Главное</button>
+                </a>
+                <input type="text" placeholder="Поиск товара">
+                <button class="btn">Корзина</button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="products-block">
+
+        <div id="modal-category">
+            <div class="categoryContainer">
+                <a href="meat.html">
+                    <div class="categoryItem">Мясо</div>
+                </a>
+                <a href="drinks.html">
+                    <div class="categoryItem">Напитки</div>
+                </a>
+                <a href="grocery.html">
+                    <div class="categoryItem">Бакалея</div>
+                </a>
+                <a href="snacks.html">
+                    <div class="categoryItem">Снэки</div>
+                </a>
+            </div>
+        </div>
+
+        <div id="modal-buy">
+            <div class="form-block">
+                <form class="form-buy">
+                    <input type="number" class="num">
+                    <label>
+                        Красный:
+                        <input type="radio" class="radio-input" name="color">
+                    </label>
+
+                    <label>
+                        Чёрный:
+                        <input type="radio" class="radio-input" name="color">
+                    </label>
+
+                    <label>
+                        Зелёный:
+                        <input type="radio" class="radio-input" name="color">
+                    </label>
+
+                    <label>
+                        Синий:
+                        <input type="radio" class="radio-input" name="color">
+                    </label>
+
+                    <textarea class="comment-text"></textarea>
+                    <span id="count">0/2000</span>
+                    <div id="btn-block-form">
+                        <div class="btn-buy-form"><span>Купить</span></div>
+                        <div class="btn-close"><span>Закрыть</span></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="product-block">
+
+        </div>
+
+        <div class="bottom-block">
+            <a class="text-link" href="meat.html">Мясо</a>
+            <a class="text-link" href="drinks.html">Напитки</a>
+            <a class="text-link" href="grocery.html">Бакалея</a>
+            <a class="text-link" href="snacks.html">Снэки</a>
+        </div>
+    </div>
+    <div class="go-top ">▲</div>
+</div>
+
+
+<script src="/src/product.card.meat.js"></script>
+<script src="/src/category.js"></script>
+<script src="/src/scroll.js"></script>
+<script src="/src/form.js"></script>
+<script src="/src/switch.theme.js"></script>
+</body>
+</html>

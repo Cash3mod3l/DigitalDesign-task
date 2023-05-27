@@ -1,0 +1,79 @@
+body {
+    overflow-x: hidden;
+}
+
+header {
+    height: 65px;
+}
+
+#head {
+    max-width: 100%;
+    width: 165vh;
+    height: 50px;
+    margin: 10px auto;
+    box-shadow: 0 0 6px 0 grey;
+    border-radius: 7px;
+    overflow: hidden;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#block-nav {
+    display: flex;
+    margin: -9px;
+    padding: 6px;
+    align-items: center;
+    height: 55px;
+    justify-content: space-around;
+    background-color: whitesmoke;
+}
+
+#block-nav input {
+    max-width: 800px;
+    width: 95vw;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    transition: 0.2s all;
+    outline: none;
+    text-decoration: none;
+}
+
+#block-nav input:focus {
+    box-shadow: 0 0 6px 0 gray;
+}
+
+.btn {
+    margin: 15px;
+    box-shadow: 0 2px 5px 0 #cfcfcf;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    transition: 0.2s all;
+}
+
+.btn:hover {
+    background-color: green;
+    color: white;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+.categoryContainer a {
+    text-decoration: none;
+    outline: none;
+    color: black;
+}
+
+.categoryContainer a:visited {
+    text-decoration: none;
+    outline: none;
+    color: black;
+}

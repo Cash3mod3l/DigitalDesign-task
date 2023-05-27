@@ -1,0 +1,39 @@
+.cardProduct {
+    width: 30vh;
+    border: 1px solid gray;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    font-size: 25px;
+    margin: 15px;
+    border-radius: 5px;
+}
+
+.btn-buy {
+    margin: 15px;
+    box-shadow: 0 2px 5px 0 #cfcfcf;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    visibility: visible;
+    transition: 0.2s all;
+}
+
+.btn-buy:hover {
+    background-color: green;
+    color: white;
+}
+
+.btn-buy:active {
+    transform: scale(0.97);
+}
+
+.image {
+    width: 15vh;
+    height: 15vh;
+    margin: 0 auto;
+}
