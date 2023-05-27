@@ -36,13 +36,6 @@ function Close() {
     const modalBuy = document.querySelector('#modal-buy');
     const goTop    = document.querySelector('.go-top');
 
-    modalBuy.onclick = function (event) {
-        if (event.target.getAttribute('id') === 'modal-buy') {
-            modalBuy.style.display = 'none';
-            goTop.style.display    = 'block';
-        }
-    };
-
     modalBuy.style.display = 'none';
     goTop.style.display    = 'block';
 }
