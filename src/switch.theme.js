@@ -1,6 +1,7 @@
 const btnTheme = document.querySelector(".btn-switch-theme");
-const body = document.body;
+const head = document.querySelector(".block-nav");
 
 btnTheme.onclick = function () {
-    body.classList.toggle('dark-theme');
+    document.body.classList.toggle('dark-theme');
+    head.classList.toggle('block-nav-dark-theme');
 }

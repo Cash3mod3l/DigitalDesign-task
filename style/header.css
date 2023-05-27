@@ -15,11 +15,12 @@ header {
     border-radius: 7px;
     overflow: hidden;
     position: fixed;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
 }
 
-#block-nav {
+.block-nav {
     display: flex;
     margin: -9px;
     padding: 6px;
@@ -29,9 +30,14 @@ header {
     background-color: whitesmoke;
 }
 
-#block-nav input {
+.block-nav-dark-theme {
+    background-color: #525252;
+}
+
+.block-nav input {
     max-width: 800px;
-    width: 95vw;
+    min-width: 200px;
+    width: 70vw;
     padding: 10px;
     border-radius: 10px;
     border: 1px solid gray;
@@ -40,7 +46,7 @@ header {
     text-decoration: none;
 }
 
-#block-nav input:focus {
+.block-nav input:focus {
     box-shadow: 0 0 6px 0 gray;
 }
 

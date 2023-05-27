@@ -10,16 +10,17 @@
     <title>Title</title>
 </head>
 <body>
+<input type="hidden" value="grocery" id="category">
 <div class="theme-block">
     <button class="btn-switch-theme">Смена темы</button>
 </div>
 <header>
     <div id="head">
         <div>
-            <div id="block-nav">
+            <div class="block-nav">
                 <button class="btn" id="btn-category">Категория</button>
                 <a href="index.html">
-                    <button class="btn">Главное</button>
+                    <button class="btn">Главная</button>
                 </a>
                 <input type="text" placeholder="Поиск товара">
                 <button class="btn">Корзина</button>
@@ -50,10 +51,10 @@
 
         <div id="modal-buy">
             <form class="form-buy">
-                <input type="number" class="num">
+                <input type="number" min="1" value="1" class="num">
                 <label>
                     Красный:
-                    <input type="radio" class="radio-input" name="color">
+                    <input type="radio" class="radio-input" name="color" checked>
                 </label>
 
                 <label>
@@ -95,7 +96,7 @@
 </div>
 
 
-<script src="/src/product.card.grocery.js"></script>
+<script src="src/product.card.js"></script>
 <script src="/src/category.js"></script>
 <script src="/src/scroll.js"></script>
 <script src="/src/form.js"></script>

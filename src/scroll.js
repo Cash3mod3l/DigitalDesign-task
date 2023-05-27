@@ -1,8 +1,8 @@
 const goTopBtn = document.querySelector('.go-top');
+const scrollThreshold = 100;
 
 window.addEventListener('scroll', function () {
     const scrolled        = window.pageYOffset;
-    const scrollThreshold = 100;
 
     if (scrolled > scrollThreshold) {
         goTopBtn.style.visibility = 'visible';

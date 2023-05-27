@@ -1,9 +1,10 @@
 const count       = document.querySelector('#count');
 const commentText = document.querySelector('.comment-text');
+const maxLengtn   = 2000;
 
 commentText.oninput = function () {
-    const maxLengtn = 2000;
-    let text        = commentText.value;
+
+    let text = commentText.value;
 
     if (text.length > maxLengtn) {
         text = text.slice(0, maxLengtn);
@@ -13,7 +14,7 @@ commentText.oninput = function () {
     count.textContent = commentText.value.length + '/2000';
 };
 
-function Form() {
+function openForm() {
     const modalBuy = document.querySelector('#modal-buy');
     const goTop    = document.querySelector('.go-top');
 
@@ -21,18 +22,21 @@ function Form() {
     goTop.style.display    = 'none';
 }
 
-function Buy() {
-    let num          = document.querySelector('.num');
-    const radioInput = document.querySelectorAll('.radio-input');
+const countNumberInput = document.querySelector('.num');
+countNumberInput.addEventListener('input', function (event) {
+    const inputValue = event.target.value;
 
-    if (num.value !== '0' && num.value !== '' && radioInput.checked !== false) {
-        alert('Покупка совершена!');
-    } else {
-        alert('Заполните все поля!');
-    }
+    const sanitizedValue = inputValue.replace(/[^0-9]/g, '');
+
+    event.target.value = sanitizedValue;
+});
+
+function buy() {
+    alert('Покупка совершена!');
 }
 
-function Close() {
+
+function closeForm() {
     const modalBuy = document.querySelector('#modal-buy');
     const goTop    = document.querySelector('.go-top');
 
@@ -41,13 +45,13 @@ function Close() {
 }
 
 document.addEventListener('click', function (event) {
-    if (event.target.getAttribute('class') === 'btn-buy') {
-        Form();
+    if (event.target.classList.contains('btn-buy')) {
+        openForm();
     }
-    if (event.target.getAttribute('class') === 'btn-close') {
-        Close();
+    if (event.target.classList.contains('btn-close')) {
+        closeForm();
     }
-    if (event.target.getAttribute('class') === 'btn-buy-form') {
-        Buy();
+    if (event.target.classList.contains('btn-buy-form')) {
+        buy();
     }
 });
