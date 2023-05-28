@@ -17,6 +17,7 @@ colors.forEach(color => {
     radioInput.type  = 'radio';
     radioInput.classList.add('radio-input');
     radioInput.name = 'color';
+    radioInput.checked = true;
     label.appendChild(radioInput);
 
     form.appendChild(label);
