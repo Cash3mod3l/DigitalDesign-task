@@ -1,8 +1,57 @@
-const count       = document.querySelector('#count');
-const commentText = document.querySelector('.comment-text');
-const maxLengtn   = 2000;
+const form = document.createElement('form');
+form.classList.add('form-buy');
 
-commentText.oninput = function () {
+const countNumberInput = document.createElement('input');
+countNumberInput.type  = 'number';
+countNumberInput.min   = '1';
+countNumberInput.value = '1';
+countNumberInput.classList.add('num');
+form.appendChild(countNumberInput);
+
+const colors = ['Красный', 'Чёрный', 'Зелёный', 'Синий'];
+colors.forEach(color => {
+    const label       = document.createElement('label');
+    label.textContent = color + ':';
+
+    const radioInput = document.createElement('input');
+    radioInput.type  = 'radio';
+    radioInput.classList.add('radio-input');
+    radioInput.name = 'color';
+    label.appendChild(radioInput);
+
+    form.appendChild(label);
+});
+
+const commentTextarea = document.createElement('textarea');
+commentTextarea.classList.add('comment-text');
+form.appendChild(commentTextarea);
+
+const countElement       = document.createElement('span');
+countElement.id          = 'count';
+countElement.textContent = '0/2000';
+form.appendChild(countElement);
+
+const btnBlockForm = document.createElement('div');
+btnBlockForm.id    = 'btn-block-form';
+
+const btnBuyForm = document.createElement('div');
+btnBuyForm.classList.add('btn-buy-form');
+btnBuyForm.textContent = 'Купить';
+btnBlockForm.appendChild(btnBuyForm);
+
+const btnClose = document.createElement('div');
+btnClose.classList.add('btn-close');
+btnClose.textContent = 'Закрыть';
+btnBlockForm.appendChild(btnClose);
+
+form.appendChild(btnBlockForm);
+
+const modalBuy = document.querySelector('#modal-buy');
+modalBuy.appendChild(form);
+
+const maxLengtn = 2000;
+
+commentTextarea.oninput = function () {
 
     let text = commentText.value;
 
@@ -10,19 +59,10 @@ commentText.oninput = function () {
         text = text.slice(0, maxLengtn);
     }
 
-    commentText.value = text;
-    count.textContent = commentText.value.length + '/2000';
+    commentTextarea.value    = text;
+    countElement.textContent = commentTextarea.value.length + '/2000';
 };
 
-function openForm() {
-    const modalBuy = document.querySelector('#modal-buy');
-    const goTop    = document.querySelector('.go-top');
-
-    modalBuy.style.display = 'grid';
-    goTop.style.display    = 'none';
-}
-
-const countNumberInput = document.querySelector('.num');
 countNumberInput.addEventListener('input', function (event) {
     const inputValue = event.target.value;
 
@@ -31,14 +71,19 @@ countNumberInput.addEventListener('input', function (event) {
     event.target.value = sanitizedValue;
 });
 
+function openForm() {
+    const goTop = document.querySelector('.go-top');
+
+    modalBuy.style.display = 'grid';
+    goTop.style.display    = 'none';
+}
+
 function buy() {
     alert('Покупка совершена!');
 }
 
-
 function closeForm() {
-    const modalBuy = document.querySelector('#modal-buy');
-    const goTop    = document.querySelector('.go-top');
+    const goTop = document.querySelector('.go-top');
 
     modalBuy.style.display = 'none';
     goTop.style.display    = 'block';
@@ -55,3 +100,5 @@ document.addEventListener('click', function (event) {
         buy();
     }
 });
+
+
